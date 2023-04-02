@@ -57,8 +57,13 @@ class Dragon
     end
 
     def eat_human 
-        @hungry = false 
-        if 
+        @is_hungry += 1
+        
+        if @is_hungry >= 4
+            @is_hungry = false 
+        end
+    end
+end 
 
 
 
