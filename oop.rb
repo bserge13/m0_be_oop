@@ -25,15 +25,15 @@ puts "--------end of #1--------"
 #  it should have a drink method. When called, the thirsty attribute changes to false
 
 class Vampire 
-    attr_reader :name 
+    attr_reader :name, :pet 
     def initialize(name, pet)
         @name = name
         @pet = "Bat"
         @thirsty = true 
     end 
 
-    def new_pet(new_pet)
-        @pet = new_pet 
+    def new_pet
+        @pet = pet 
     end 
 end 
 
@@ -48,20 +48,20 @@ puts "--------end of #2--------"
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
 
 class Dragon 
-    attr_reader :name 
+    attr_reader :name, :rider, :color, :is_hungry 
     def initialize(name, rider, color)
         @name = name
         @rider = rider
         @color = color 
-        @hungry = true 
+        @is_hungry = true 
     end
 
-    def eat_something 
+    def eat_human 
         @hungry = false 
         if 
 
 
-            
+
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic disposition attribute (string)
@@ -72,7 +72,7 @@ class Dragon
 #  it should have a has_ring attribute. If the Hobbit's name is "Frodo", true, if not, false.
 
 class Hobbit 
-    attr_reader :name 
+    attr_reader :name, :disposition, :age, :is_adult, :is_old, :has_ring 
     def initialize(name, disposition)
         @name = name
         @disposition = disposition
@@ -80,9 +80,30 @@ class Hobbit
         @is_adult = false 
         @is_old = false 
         @has_ring = false 
+    
+    if @age >= 33
+        @is_adult = true 
+    end
+    
+    if @age >=101 
+        @is_old = true 
+    end
+
+    if @name == "Frodo" 
+        @has_ring = true
+    else @has_ring = false
     end 
 
     def celebrate_birthday
-        @age += 1 
+    @age += 1 
+
+    if @age >= 33
+        @is_adult = true
     end 
-end
+
+    if @age >= 101
+    @is_old = true 
+    end 
+end  
+
+ 
