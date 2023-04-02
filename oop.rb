@@ -4,15 +4,20 @@
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
 
 class Unicorn 
-attr_reader :name 
-def initialize(name)
-    @name = name 
-    @color = "Silver"
+    attr_reader :name 
+    def initialize(name)
+        @name = name 
+        @color = "Silver"
+    end 
+
+    def say_cheese
+        return "*~*smiles in unicorn*~*"
+    end 
 end 
 
-def say
 
 
+puts "--------end of #1--------"
 #  Write a class called Vampire
 #  it should have a dynamic name attribute
 #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
@@ -32,6 +37,9 @@ class Vampire
     end 
 end 
 
+
+
+puts "--------end of #2--------"
 #  Write a Dragon class
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic rider attribute (string)
@@ -47,11 +55,13 @@ class Dragon
         @color = color 
         @hungry = true 
     end
+
     def eat_something 
         @hungry = false 
         if 
 
 
+            
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic disposition attribute (string)
@@ -75,3 +85,4 @@ class Hobbit
     def celebrate_birthday
         @age += 1 
     end 
+end
