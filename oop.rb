@@ -93,24 +93,24 @@ class Hobbit
     end 
 end 
 
-    if age >= 33
+    if @age >= 33
         @is_adult = true 
     end
     
-    if age >=101 
+    if @age >=101 
         @is_old = true 
     end
 
-    if name == "Frodo" 
+    if @name == "Frodo" 
         @has_ring = true
     else @has_ring = false
     end 
 
-    if age >= 33
+    if @age >= 33
         @is_adult = true
     end 
 
-    if age >= 101
+    if @age >= 101
     @is_old = true 
     end 
 
