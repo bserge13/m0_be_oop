@@ -7,7 +7,7 @@ class Unicorn
     attr_reader :name, :color 
     def initialize(name, color = "Silver")
         @name = name 
-        @color = "Silver"
+        @color = color 
     end 
 
     def say_cheese
@@ -26,10 +26,14 @@ puts "--------end of #1--------"
 
 class Vampire 
     attr_reader :name, :pet, :thirsty 
-    def initialize(name, pet)
+    def initialize(name, pet = "Bat", thirsty = true)
         @name = name
-        @pet = "Bat"
+        @pet = pet
         @thirsty = true 
+    end 
+
+    def drink 
+        thirsty = false 
     end 
 end 
 
@@ -45,7 +49,7 @@ puts "--------end of #2--------"
 
 class Dragon 
     attr_reader :name, :rider, :color, :is_hungry 
-    def initialize(name, rider, color)
+    def initialize(name, rider, color, counter = 0)
         @name = name
         @rider = rider
         @color = color 
@@ -53,12 +57,12 @@ class Dragon
     end
 
     def eat_human 
-        @is_hungry += 1
-        
-        if @is_hungry >= 4
-            @is_hungry = false 
-        end
+        counter += 1
     end
+    
+    if counter = 4 
+        @is_hungry = false
+    end 
 end 
 
 
