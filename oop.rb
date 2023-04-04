@@ -4,14 +4,14 @@
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
 
 class Unicorn 
-    attr_reader :name 
-    def initialize(name)
+    attr_reader :name, :color 
+    def initialize(name, color = "Silver")
         @name = name 
         @color = "Silver"
     end 
 
     def say_cheese
-        return "*~*smiles in unicorn*~*"
+        "*~* smiles in unicorn *~*"
     end 
 end 
 
@@ -25,15 +25,11 @@ puts "--------end of #1--------"
 #  it should have a drink method. When called, the thirsty attribute changes to false
 
 class Vampire 
-    attr_reader :name, :pet 
+    attr_reader :name, :pet, :thirsty 
     def initialize(name, pet)
         @name = name
         @pet = "Bat"
         @thirsty = true 
-    end 
-
-    def new_pet
-        @pet = pet 
     end 
 end 
 
@@ -78,7 +74,7 @@ end
 
 class Hobbit 
     attr_reader :name, :disposition, :age, :is_adult, :is_old, :has_ring 
-    def initialize(name, disposition)
+    def initialize(name, disposition, age = 0)
         @name = name
         @disposition = disposition
         @age = 0 
@@ -101,6 +97,7 @@ class Hobbit
 
     def celebrate_birthday
     @age += 1 
+    end 
 
     if @age >= 33
         @is_adult = true
