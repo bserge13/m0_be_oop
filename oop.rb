@@ -59,11 +59,12 @@ class Dragon
     def eat_human 
         counter += 1
     end
+end 
     
     if counter >= 4 
         @is_hungry = false
     end 
-end 
+
 
 
 
@@ -90,6 +91,7 @@ class Hobbit
     def celebrate_birthday
         age += 1
     end 
+end 
 
     if age >= 33
         @is_adult = true 
@@ -111,6 +113,5 @@ class Hobbit
     if age >= 101
     @is_old = true 
     end 
-end  
 
  
